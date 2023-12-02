@@ -1,0 +1,33 @@
+﻿@model ContempProgFinalProject.Models.TeamMembers
+
+@{
+    ViewData["Title"] = "Create a new Member";
+}
+
+<h2>Complete the form</h2>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+
+        <p>
+            @Html.LabelFor(x=>x.Name);
+            @Html.TextAreaFor(x => x.Name);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Birthdate);
+            @Html.TextAreaFor(x => x.Birthdate);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.CollegeProgram);
+            @Html.TextAreaFor(x=>x.CollegeProgram);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.CollegeYear);
+            @Html.EditorFor(x=>x.CollegeYear);
+        </p>
+        <p>
+            <button type="submit">Create Member</button>
+        </p>
+    }
+
+</fieldset>

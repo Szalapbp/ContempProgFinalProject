@@ -1,0 +1,12 @@
+﻿@using ContempProgFinalProject.Models;
+@model ContempProgFinalProject.Models.WeatherForecast
+@{
+    ViewData["Title"] = "Weather Home Page";
+}
+<h2>Welcome to the Weather Section</h2>
+<ul>
+    @foreach (var item in (List<WeatherForecast>)ViewData["weather"])
+    {
+        <li>@item.GetText()</li>
+    }
+</ul>

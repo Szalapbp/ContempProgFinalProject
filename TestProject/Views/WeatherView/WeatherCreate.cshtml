@@ -1,0 +1,33 @@
+﻿@model ContempProgFinalProject.Models.WeatherForecast
+
+@{
+    ViewData["Title"] = "Create a new Weather Entry";
+}
+
+<h2>Complete the form</h2>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+
+        <p>
+            @Html.LabelFor(x=>x.Date);
+            @Html.TextAreaFor(x => x.Date);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.TemperatureF);
+            @Html.EditorFor(x => x.TemperatureF);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.WeatherType);
+            @Html.TextAreaFor(x=>x.WeatherType);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.RoadConditions);
+            @Html.TextAreaFor(x=>x.RoadConditions);
+        </p>
+        <p>
+            <button type="submit">Create Weather Entry</button>
+        </p>
+    }
+
+</fieldset>

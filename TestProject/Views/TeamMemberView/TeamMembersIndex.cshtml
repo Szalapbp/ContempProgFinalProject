@@ -1,0 +1,12 @@
+﻿@using ContempProgFinalProject.Models;
+@model ContempProgFinalProject.Models.TeamMembers
+@{
+    ViewData["Title"] = "Members Home Page";
+}
+<h2>Welcome to the Members Section</h2>
+<ul>
+    @foreach (var item in (List<TeamMembers>)ViewData["members"])
+    {
+        <li>@item.GetText()</li>
+    }
+</ul>
