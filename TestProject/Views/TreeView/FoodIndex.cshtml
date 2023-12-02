@@ -1,0 +1,12 @@
+﻿@using ContempProgFinalProject.Models;
+@model ContempProgFinalProject.Models.Tree
+@{
+    ViewData["Title"] = "Tree Home Page";
+}
+<h2>Welcome to the Tree Section</h2>
+<ul>
+    @foreach (var item in (List<Tree>)ViewData["tree"])
+    {
+        <li>@item.GetText()</li>
+    }
+</ul>

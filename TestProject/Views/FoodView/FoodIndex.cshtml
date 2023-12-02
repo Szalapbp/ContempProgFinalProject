@@ -1,0 +1,12 @@
+﻿@using ContempProgFinalProject.Models;
+@model ContempProgFinalProject.Models.Food
+@{
+    ViewData["Title"] = "Food Home Page";
+}
+<h2>Welcome to the Food Section</h2>
+<ul>
+    @foreach (var item in (List<Food>)ViewData["food"])
+    {
+        <li>@item.GetText()</li>
+    }
+</ul>

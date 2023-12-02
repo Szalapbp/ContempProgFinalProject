@@ -1,0 +1,36 @@
+﻿@model ContempProgFinalProject.Models.Food
+
+@{
+    ViewData["Title"] = "Create a new Food";
+}
+
+<h2>Complete the form</h2>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+        <p>
+            @Html.LabelFor(x=>x.Id);
+            @Html.TextAreaFor(x => x.Id);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Name);
+            @Html.TextAreaFor(x => x.Name);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Origin);
+            @Html.TextAreaFor(x => x.Origin);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Price);
+            @Html.TextAreaFor(x=>x.Price);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Quantity);
+            @Html.EditorFor(x=>x.Quantity);
+        </p>
+        <p>
+            <button type="submit">Create Food</button>
+        </p>
+    }
+
+</fieldset>
