@@ -1,0 +1,37 @@
+﻿@model ContempProgFinalProject.Models.Tree
+
+@{
+    ViewData["Title"] = "Create a new Tree";
+}
+
+<h2>Complete the form</h2>
+<fieldset>
+    @using (Html.BeginForm())
+    {
+
+        <p>
+            @Html.LabelFor(x=>x.Id);
+            @Html.TextAreaFor(x => x.Id);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Type);
+            @Html.TextAreaFor(x => x.Type);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Price);
+            @Html.TextAreaFor(x=>x.Price);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Height);
+            @Html.EditorFor(x=>x.Height);
+        </p>
+        <p>
+            @Html.LabelFor(x=>x.Age);
+            @Html.EditorFor(x=>x.Age);
+        </p>
+        <p>
+            <button type="submit">Create Tree</button>
+        </p>
+    }
+
+</fieldset>
